@@ -4,3 +4,4 @@ scikit-learn>=1.5
 matplotlib>=3.9
 seaborn>=0.13
 pillow>=10.0
+streamlit>=1.36
