@@ -54,6 +54,12 @@ Train and compare baseline models:
 python src/train_model.py
 ```
 
+Evaluate the selected model:
+
+```bash
+python src/evaluate_model.py
+```
+
 The generator writes:
 
 ```text
@@ -65,6 +71,9 @@ Training writes:
 ```text
 models/integrity_risk_model.pkl
 outputs/reports/model_comparison.csv
+outputs/reports/classification_report.txt
+outputs/charts/confusion_matrix.png
+outputs/charts/feature_importance.png
 ```
 
 ## Dataset

@@ -24,9 +24,12 @@ models/*.onnx
 
 outputs/charts/*
 !outputs/charts/.gitkeep
+!outputs/charts/confusion_matrix.png
+!outputs/charts/feature_importance.png
 outputs/reports/*
 !outputs/reports/.gitkeep
 !outputs/reports/model_comparison.csv
+!outputs/reports/classification_report.txt
 
 .DS_Store
 Thumbs.db
