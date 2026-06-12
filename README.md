@@ -60,6 +60,12 @@ Evaluate the selected model:
 python src/evaluate_model.py
 ```
 
+Launch the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
 The generator writes:
 
 ```text
