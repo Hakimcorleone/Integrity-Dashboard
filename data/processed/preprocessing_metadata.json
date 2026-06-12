@@ -1,0 +1,51 @@
+{
+  "target_column": "risk_level",
+  "excluded_feature_columns": [
+    "transaction_id",
+    "vendor_id",
+    "risk_score",
+    "review_required"
+  ],
+  "categorical_columns": [
+    "department",
+    "region",
+    "procurement_method"
+  ],
+  "numeric_columns": [
+    "contract_amount",
+    "invoice_amount",
+    "claimed_units",
+    "verified_units",
+    "number_of_bidders",
+    "tender_duration_days",
+    "has_checker",
+    "has_approver",
+    "coi_declared",
+    "past_complaints_12m",
+    "variation_order_count",
+    "variation_order_amount",
+    "late_delivery_days",
+    "duplicate_invoice_flag",
+    "round_amount_flag",
+    "split_purchase_flag",
+    "invoice_contract_ratio",
+    "invoice_contract_variance",
+    "claim_variance_units",
+    "claim_variance_pct",
+    "direct_award_flag",
+    "emergency_procurement_flag",
+    "single_bidder_flag",
+    "short_tender_flag",
+    "missing_checker_flag",
+    "missing_approver_flag",
+    "complaint_flag",
+    "vo_amount_ratio",
+    "late_delivery_flag"
+  ],
+  "encoded_feature_count": 47,
+  "train_rows": 800,
+  "test_rows": 200,
+  "test_size": 0.2,
+  "random_state": 42,
+  "purpose": "Predict review priority level, not confirmed misconduct."
+}

@@ -42,10 +42,29 @@ Generate the synthetic dataset:
 python src/generate_dataset.py
 ```
 
-The script writes:
+Preprocess the dataset:
+
+```bash
+python src/preprocess.py
+```
+
+Train and compare baseline models:
+
+```bash
+python src/train_model.py
+```
+
+The generator writes:
 
 ```text
 data/raw/integrity_procurement_risk_dataset.csv
+```
+
+Training writes:
+
+```text
+models/integrity_risk_model.pkl
+outputs/reports/model_comparison.csv
 ```
 
 ## Dataset
