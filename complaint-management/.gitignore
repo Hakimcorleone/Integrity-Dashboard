@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-worker/
+coverage/
+.wrangler/
+.dev.vars
+.env*
+!.dev.vars.example
+*.tsbuildinfo
+*.log

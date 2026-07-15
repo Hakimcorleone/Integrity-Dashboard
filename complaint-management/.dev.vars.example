@@ -1,0 +1,11 @@
+# Copy to .dev.vars only in an ephemeral development environment. Never commit real values.
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+CSRF_SECRET=replace-with-at-least-32-random-bytes
+RATE_LIMIT_SALT=replace-with-at-least-32-random-bytes
+TEAM_DOMAIN=https://your-team.cloudflareaccess.com
+ACCESS_AUD=your-cloudflare-access-audience
+DEV_AUTH_BYPASS=0
+GRAPH_TENANT_ID=
+GRAPH_CLIENT_ID=
+GRAPH_CLIENT_SECRET=
+GRAPH_SENDER_EMAIL=
