@@ -1,0 +1,55 @@
+name: Complaint Management CI
+
+on:
+  pull_request:
+    paths:
+      - "complaint-management/**"
+      - ".github/workflows/complaint-management-*.yml"
+  push:
+    branches: [main]
+    paths:
+      - "complaint-management/**"
+      - ".github/workflows/complaint-management-*.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: complaint-management-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: complaint-management
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: complaint-management/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm db:migrate:local
+      - run: pnpm build
+      - name: Reject committed secrets
+        shell: bash
+        run: |
+          if git grep -nE 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk_live_[A-Za-z0-9]+' -- . ':!complaint-management/.dev.vars.example'; then
+            echo "Potential private key or live credential detected" >&2
+            exit 1
+          fi
+          if git grep -nE '(CLIENT_SECRET|API_TOKEN|PRIVATE_KEY)[[:space:]]*=[[:space:]]*[A-Za-z0-9_-]{20,}' -- . ':!complaint-management/.dev.vars.example'; then
+            echo "Potential environment credential detected" >&2
+            exit 1
+          fi

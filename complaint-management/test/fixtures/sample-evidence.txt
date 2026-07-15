@@ -1,0 +1,2 @@
+Synthetic test fixture for authorised evidence upload and download verification.
+It contains no real complaint, personal, confidential, or production information.
