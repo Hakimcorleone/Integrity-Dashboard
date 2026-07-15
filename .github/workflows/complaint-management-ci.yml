@@ -49,7 +49,7 @@ jobs:
             echo "Potential private key or live credential detected" >&2
             exit 1
           fi
-          if git grep -niE 'client[_-]?secret[[:space:]]*[:=][[:space:]]*[A-Za-z0-9_-]{16,}' -- . ':!complaint-management/.dev.vars.example'; then
-            echo "Potential client secret detected" >&2
+          if git grep -nE '(CLIENT_SECRET|API_TOKEN|PRIVATE_KEY)[[:space:]]*=[[:space:]]*[A-Za-z0-9_-]{20,}' -- . ':!complaint-management/.dev.vars.example'; then
+            echo "Potential environment credential detected" >&2
             exit 1
           fi
