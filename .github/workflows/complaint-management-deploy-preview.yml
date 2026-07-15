@@ -1,0 +1,84 @@
+name: Complaint Management Preview
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "complaint-management/**"
+      - ".github/workflows/complaint-management-*.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: complaint-management-preview-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    if: github.event.pull_request.head.repo.full_name == github.repository || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment: preview
+    defaults:
+      run:
+        working-directory: complaint-management
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: complaint-management/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck && pnpm lint && pnpm test
+      - name: Prepare preview bindings
+        env:
+          TARGET_ENV: preview
+          D1_DATABASE_ID: ${{ vars.PREVIEW_D1_DATABASE_ID }}
+          ALLOWED_EMAIL_DOMAIN: ${{ vars.ALLOWED_EMAIL_DOMAIN }}
+          TURNSTILE_SITE_KEY: ${{ vars.PREVIEW_TURNSTILE_SITE_KEY }}
+        run: node scripts/prepare-wrangler-config.mjs
+      - name: Apply preview D1 migrations
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: pnpm db:migrate:preview
+      - name: Apply idempotent preview-only synthetic data
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: pnpm db:seed:preview
+      - name: Build client
+        run: pnpm exec vite build
+      - name: Deploy preview Worker
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: complaint-management
+          command: deploy --env preview
+          secrets: |
+            TURNSTILE_SECRET_KEY
+            CSRF_SECRET
+            RATE_LIMIT_SALT
+            ACCESS_AUD
+            TEAM_DOMAIN
+        env:
+          TURNSTILE_SECRET_KEY: ${{ secrets.PREVIEW_TURNSTILE_SECRET_KEY }}
+          CSRF_SECRET: ${{ secrets.PREVIEW_CSRF_SECRET }}
+          RATE_LIMIT_SALT: ${{ secrets.PREVIEW_RATE_LIMIT_SALT }}
+          ACCESS_AUD: ${{ secrets.PREVIEW_ACCESS_AUD }}
+          TEAM_DOMAIN: ${{ vars.TEAM_DOMAIN }}
+      - name: Verify preview health
+        env:
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: |
+          test -n "$DEPLOYMENT_URL"
+          curl --fail --retry 5 --retry-delay 3 "$DEPLOYMENT_URL/api/health"
