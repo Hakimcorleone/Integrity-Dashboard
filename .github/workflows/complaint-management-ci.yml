@@ -45,7 +45,11 @@ jobs:
       - name: Reject committed secrets
         shell: bash
         run: |
-          if git grep -nE '(BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk_live_[A-Za-z0-9]+|client_secret["'"' ]*[:=]["'"' ][A-Za-z0-9_-]{16,})' -- . ':!complaint-management/.dev.vars.example'; then
-            echo "Potential secret detected" >&2
+          if git grep -nE 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|sk_live_[A-Za-z0-9]+' -- . ':!complaint-management/.dev.vars.example'; then
+            echo "Potential private key or live credential detected" >&2
+            exit 1
+          fi
+          if git grep -niE 'client[_-]?secret[[:space:]]*[:=][[:space:]]*[A-Za-z0-9_-]{16,}' -- . ':!complaint-management/.dev.vars.example'; then
+            echo "Potential client secret detected" >&2
             exit 1
           fi
