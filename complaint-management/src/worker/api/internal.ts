@@ -215,4 +215,515 @@ internalApi.post("/cases/:caseId/assignments", async (context) => {
         (id, complaint_id, user_id, reviewer_id, assignment_type, scope, instructions, assigned_by)
        VALUES (?, ?, ?, ?, 'PRIMARY', ?, ?, ?)`,
     ).bind(crypto.randomUUID(), complaint.id, data.primaryOfficerId, reviewer?.id ?? null, data.scope, data.instructions, actor.id),
-    ...data.supportingOfficerIds.map(Î};∂âûÀk∫wµÁE•–ÅçΩπ—ï·–π…ïƒπ©ÕΩ∏†§§Ï(ÄÅ•òÄ°lâΩµ¡±ï—ïêà∞Äâ±ΩÕïêâtπ•πç±’ëïÃ°ëÖ—ÑπÕ—Ö—’Ã§ÄòòÄÖ¡…•Ÿ•±ïùïê§Å—°…Ω‹Åπï‹Å……Ω»†â=I	%8à§Ï(ÄÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππâÖ—ç†°l(ÄÄÄÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âUAQÅçΩ……ïç—•Ÿï}Öç—•ΩπÃÅMPÅÕ—Ö—’ÃÄÙÄ¸∞Å¡…Ωù…ïÕÕ}’¡ëÖ—îÄÙÄ¸∞Å’¡ëÖ—ïë}Ö–ÄÙÅUII9Q}Q%5MQ5@Å]!IÅ•êÄÙÄ¸à§πâ•πê°ëÖ—ÑπÕ—Ö—’Ã∞ÅëÖ—Ñπ¡…Ωù…ïÕÕU¡ëÖ—î∞ÅÖç—•Ω∏π•ê§∞(ÄÄÄÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†â%9MIPÅ%9Q<ÅçΩ……ïç—•Ÿï}Öç—•Ωπ}’¡ëÖ—ïÃÄ°•ê∞ÅçΩ……ïç—•Ÿï}Öç—•Ωπ}•ê∞ÅÕ—Ö—’Ã∞Å¡…Ωù…ïÕÕ}’¡ëÖ—î∞Å’¡ëÖ—ïë}â‰§ÅY1ULÄ†¸∞Ä¸∞Ä¸∞Ä¸∞Ä¸§à§πâ•πê°ç…Â¡—ºπ…ÖπëΩµUU%†§∞ÅÖç—•Ω∏π•ê∞ÅëÖ—ÑπÕ—Ö—’Ã∞ÅëÖ—Ñπ¡…Ωù…ïÕÕU¡ëÖ—î∞ÅÖç—Ω»π•ê§∞(ÄÅt§Ï(ÄÅÖ›Ö•–ÅÖ’ë•–°çΩπ—ï·–πïπÿπ∞ÅÏÅÖç—Ω»∞ÅÖç—•Ω∏ËÄâ=IIQ%Y}Q%=9}UAQà∞Åïπ—•—ÂQÂ¡îËÄâçΩ……ïç—•Ÿï}Öç—•Ω∏à∞Åïπ—•—Â%êËÅÖç—•Ω∏π•ê∞Å¡…ïŸ•Ω’ÕYÖ±’îËÅÏÅÕ—Ö—’ÃËÅÖç—•Ω∏πÕ—Ö—’ÃÅÙ∞Åπï›YÖ±’îËÅÏÅÕ—Ö—’ÃËÅëÖ—ÑπÕ—Ö—’ÃÅÙ∞ÅçΩ……ï±Ö—•Ωπ%êËÅçΩπ—ï·–πùï–†âçΩ……ï±Ö—•Ωπ%êà§∞Å…ïÖÕΩ∏ËÅëÖ—Ñπ¡…Ωù…ïÕÕU¡ëÖ—î∞ÅÕΩ’…çîËÄâ%9QI90àÅÙ§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞ÅÏÅÖç—•Ωπ%êËÅÖç—•Ω∏πÖç—•Ωπ}•ê∞ÅÕ—Ö—’ÃËÅëÖ—ÑπÕ—Ö—’ÃÅÙ§§Ï)Ù§Ï()•π—ï…πÖ±¡§π¡ΩÕ–†àΩçΩ……ïç—•ŸîµÖç—•ΩπÃºÈÖç—•Ωπ%êΩŸï…•ô‰à∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅÖÕÕï…—9Ω—IïÖë=π±‰°Öç—Ω»§Ï(ÄÅÖÕÕï…—IΩ±î°Öç—Ω»∞ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hà∞ÄâIY%]Hà∞Äâ5959Q}AAI=YHât§Ï(ÄÅçΩπÕ–ÅÖç—•Ω∏ÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âM1PÄ®ÅI=4ÅçΩ……ïç—•Ÿï}Öç—•ΩπÃÅ]!IÅÖç—•Ωπ}•êÄÙÄ¸Å9Åëï±ï—ïë}Ö–Å%LÅ9U10à§πâ•πê°çΩπ—ï·–π…ïƒπ¡Ö…Ö¥†âÖç—•Ωπ%êà§§πô•…Õ–ÒÖπ‰¯†§Ï(ÄÅ•òÄ†ÖÖç—•Ω∏§Å—°…Ω‹Åπï‹Å……Ω»†â9=Q}=U9à§Ï(ÄÅ•òÄ°Öç—•Ω∏πÖç—•Ωπ}Ω›πï…}•êÄÙÙÙÅÖç—Ω»π•ê§Å—°…Ω‹Åπï‹Å……Ω»†âMIQ%=9}=}UQ%Là§Ï(ÄÅçΩπÕ–ÅëÖ—ÑÄÙÅËπΩâ©ïç–°ÏÅëïç•Õ•Ω∏ËÅËπïπ’¥°lâ¡¡…ΩŸîà∞ÄâIï©ïç–ât§∞Å…ïµÖ…≠ÃËÅËπÕ—…•πú†§π—…•¥†§πµ•∏†»§πµÖ‡†‘¿¿¿§ÅÙ§π¡Ö…Õî°Ö›Ö•–ÅçΩπ—ï·–π…ïƒπ©ÕΩ∏†§§Ï(ÄÅçΩπÕ–ÅÕ—Ö—’ÃÄÙÅëÖ—Ñπëïç•Õ•Ω∏ÄÙÙÙÄâ¡¡…ΩŸîàÄ¸Äâ±ΩÕïêàÄËÄâIï©ïç—ïêàÏ(ÄÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÅÅUAQÅçΩ……ïç—•Ÿï}Öç—•ΩπÃÅMPÅÕ—Ö—’ÃÄÙÄ¸∞Å•π—ïù…•—Â}Ÿï…•ô•ï…}•êÄÙÄ¸∞ÅŸï…•ô•çÖ—•Ωπ}…ïµÖ…≠ÃÄÙÄ¸∞ÅŸï…•ô•ïë}Ö–ÄÙÅUII9Q}Q%5MQ5@∞(ÄÄÄÄÄÅçΩµ¡±ï—•Ωπ}ëÖ—îÄÙÅMÅ]!8Ä¸ÄÙÄù±ΩÕïêúÅQ!8ÅUII9Q}Q%5MQ5@Å1MÅçΩµ¡±ï—•Ωπ}ëÖ—îÅ9∞(ÄÄÄÄÄÅç±ΩÕ’…ï}Ö¡¡…ΩŸïë}â‰ÄÙÅMÅ]!8Ä¸ÄÙÄù±ΩÕïêúÅQ!8Ä¸Å1MÅç±ΩÕ’…ï}Ö¡¡…ΩŸïë}â‰Å9∞Å’¡ëÖ—ïë}Ö–ÄÙÅUII9Q}Q%5MQ5@Å]!IÅ•êÄÙÄ˝Ä∞(ÄÄ§πâ•πê°Õ—Ö—’Ã∞ÅÖç—Ω»π•ê∞ÅëÖ—Ñπ…ïµÖ…≠Ã∞ÅÕ—Ö—’Ã∞ÅÕ—Ö—’Ã∞ÅÖç—Ω»π•ê∞ÅÖç—•Ω∏π•ê§π…’∏†§Ï(ÄÅÖ›Ö•–ÅÖ’ë•–°çΩπ—ï·–πïπÿπ∞ÅÏÅÖç—Ω»∞ÅÖç—•Ω∏ËÄâ=IIQ%Y}Q%=9}YI%%à∞Åïπ—•—ÂQÂ¡îËÄâçΩ……ïç—•Ÿï}Öç—•Ω∏à∞Åïπ—•—Â%êËÅÖç—•Ω∏π•ê∞Å¡…ïŸ•Ω’ÕYÖ±’îËÅÏÅÕ—Ö—’ÃËÅÖç—•Ω∏πÕ—Ö—’ÃÅÙ∞Åπï›YÖ±’îËÅÏÅÕ—Ö—’Ã∞Åëïç•Õ•Ω∏ËÅëÖ—Ñπëïç•Õ•Ω∏ÅÙ∞ÅçΩ……ï±Ö—•Ωπ%êËÅçΩπ—ï·–πùï–†âçΩ……ï±Ö—•Ωπ%êà§∞Å…ïÖÕΩ∏ËÅëÖ—Ñπ…ïµÖ…≠Ã∞ÅÕΩ’…çîËÄâ%9QI90àÅÙ§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞ÅÏÅÖç—•Ωπ%êËÅÖç—•Ω∏πÖç—•Ωπ}•ê∞ÅÕ—Ö—’ÃÅÙ§§Ï)Ù§Ï()•π—ï…πÖ±¡§π¡ΩÕ–†àΩçÖÕïÃºÈçÖÕï%êΩç±ΩÕîà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅÖÕÕï…—9Ω—IïÖë=π±‰°Öç—Ω»§Ï(ÄÅÖÕÕï…—IΩ±î°Öç—Ω»∞ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hà∞Äâ5959Q}AAI=YHât§Ï(ÄÅçΩπÕ–ÅçΩµ¡±Ö•π–ÄÙÅÖ›Ö•–Å…ï≈’•…ïÖÕî°çΩπ—ï·–∞ÅçΩπ—ï·–π…ïƒπ¡Ö…Ö¥†âçÖÕï%êà§§Ï(ÄÅ•òÄ†Ñ°lâ=’—çΩµîÅΩµµ’π•çÖ—•Ω∏ÅAïπë•πúà∞ÄâΩ……ïç—•ŸîÅç—•Ω∏Å5Ωπ•—Ω…•πúà∞ÄâIïôï……ïêâtÅÖÃÅÕ—…•πùmt§π•πç±’ëïÃ°çΩµ¡±Ö•π–πÕ—Ö—’Ã§§Å—°…Ω‹Åπï‹Å……Ω»†â%9Y1%}MQQà§Ï(ÄÅçΩπÕ–ÅëÖ—ÑÄÙÅç±ΩÕ’…ïMç°ïµÑπ¡Ö…Õî°Ö›Ö•–ÅçΩπ—ï·–π…ïƒπ©ÕΩ∏†§§Ï(ÄÅ•òÄ†ÖëÖ—ÑπçΩµµ’π•çÖ—•ΩπΩµ¡±ï—ïê§Å—°…Ω‹Åπï‹Å……Ω»†â1=MUI}IEU%I59QLà§Ï(ÄÅçΩπÕ–Åç°ïç≠ÃÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÅÅM1P(ÄÄÄÄÄÅa%MQL°M1PÄƒÅI=4ÅÖ¡¡…ΩŸÖ±ÃÅÑÅ]!IÅÑπçΩµ¡±Ö•π—}•êÄÙÄ¸Å9ÅÑπÕ—ÖùîÄÙÄù5959PúÅ9ÅÑπëïç•Õ•Ω∏ÄÙÄù¡¡…ΩŸîú§ÅLÅÖ¡¡…ΩŸïê∞(ÄÄÄÄÄÅa%MQL°M1PÄƒÅI=4Å•πŸïÕ—•ùÖ—•Ωπ}ô•πë•πùÃÅòÅ]!IÅòπçΩµ¡±Ö•π—}•êÄÙÄ¸Å9ÅòπÕ—Ö—’ÃÄÙÄùAAI=Yú§ÅLÅô•πë•πùÃ∞(ÄÄÄÄÄÅa%MQL°M1PÄƒÅI=4ÅçΩµµ’π•çÖ—•ΩπÃÅç¥Å]!IÅç¥πçΩµ¡±Ö•π—}•êÄÙÄ¸Å9Åç¥πçΩµµ’π•çÖ—•Ωπ}—Â¡îÄÙÄù=UQ=5úÅ9Åç¥πÕ—Ö—’ÃÄÙÄù=5A1Qú§ÅLÅçΩµµ’π•çÖ—ïê∞(ÄÄÄÄÄÄ°M1PÅ=U9P†®§ÅI=4ÅçΩ……ïç—•Ÿï}Öç—•ΩπÃÅçÑÅ]!IÅçÑπçΩµ¡±Ö•π—}•êÄÙÄ¸Å9ÅçÑπëï±ï—ïë}Ö–Å%LÅ9U10Å9ÅçÑπÕ—Ö—’ÃÅ9=PÅ%8Ä†ù±ΩÕïêú∞ùIï©ïç—ïêú§Å9ÅçÑπµΩπ•—Ω…•πù}—…ÖπÕôï……ïêÄÙÄ¿§ÅLÅΩ¡ïπ}Öç—•ΩπÕÄ∞(ÄÄ§πâ•πê°çΩµ¡±Ö•π–π•ê∞ÅçΩµ¡±Ö•π–π•ê∞ÅçΩµ¡±Ö•π–π•ê∞ÅçΩµ¡±Ö•π–π•ê§πô•…Õ–ÒÏÅÖ¡¡…ΩŸïêËÅπ’µâï»ÏÅô•πë•πùÃËÅπ’µâï»ÏÅçΩµµ’π•çÖ—ïêËÅπ’µâï»ÏÅΩ¡ïπ}Öç—•ΩπÃËÅπ’µâï»ÅÙ¯†§Ï(ÄÅ•òÄ°çΩµ¡±Ö•π–πÕ—Ö—’ÃÄÑÙÙÄâIïôï……ïêàÄòòÄ†Öç°ïç≠Ã¸πÖ¡¡…ΩŸïêÅÒÄÖç°ïç≠Ãπô•πë•πùÃÅÒÄÖç°ïç≠ÃπçΩµµ’π•çÖ—ïê§§Å—°…Ω‹Åπï‹Å……Ω»†â1=MUI}IEU%I59QLà§Ï(ÄÅ•òÄ†°ç°ïç≠Ã¸πΩ¡ïπ}Öç—•ΩπÃÄ¸¸Ä¿§Ä¯Ä¿ÄòòÄÖëÖ—Ñπ—…ÖπÕôï…=¡ïπç—•ΩπÃ§Å—°…Ω‹Åπï‹Å……Ω»†â1=MUI}IEU%I59QLà§Ï(ÄÅ•òÄ°ëÖ—Ñπ—…ÖπÕôï…=¡ïπç—•ΩπÃ§ÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âUAQÅçΩ……ïç—•Ÿï}Öç—•ΩπÃÅMPÅµΩπ•—Ω…•πù}—…ÖπÕôï……ïêÄÙÄƒÅ]!IÅçΩµ¡±Ö•π—}•êÄÙÄ¸Å9ÅÕ—Ö—’ÃÅ9=PÅ%8Ä†ù±ΩÕïêú∞ùIï©ïç—ïêú§à§πâ•πê°çΩµ¡±Ö•π–π•ê§π…’∏†§Ï(ÄÅÖÕÕï…—Q…ÖπÕ•—•Ω∏°çΩµ¡±Ö•π–πÕ—Ö—’ÃÅÖÃÅΩµ¡±Ö•π—M—Ö—’Ã∞Äâ±ΩÕïêà§Ï(ÄÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÄâUAQÅçΩµ¡±Ö•π—ÃÅMPÅ•πŸïÕ—•ùÖ—•Ωπ}Ω’—çΩµîÄÙÄ¸∞Åç±ΩÕ’…ï}…ïÖÕΩ∏ÄÙÄ¸∞Åç±ΩÕïë}Ö–ÄÙÅUII9Q}Q%5MQ5@∞Å’¡ëÖ—ïë}â‰ÄÙÄ¸Å]!IÅ•êÄÙÄ¸à∞(ÄÄ§πâ•πê°ëÖ—ÑπΩ’—çΩµî∞ÅëÖ—Ñπ…ïÖÕΩ∏∞ÅÖç—Ω»π•ê∞ÅçΩµ¡±Ö•π–π•ê§π…’∏†§Ï(ÄÅÖ›Ö•–Åç°ÖπùïM—Ö—’Ã°çΩπ—ï·–πïπÿπ∞ÅÏÅçΩµ¡±Ö•π—%êËÅçΩµ¡±Ö•π–π•ê∞Åô…Ω¥ËÅçΩµ¡±Ö•π–πÕ—Ö—’Ã∞Å—ºËÄâ±ΩÕïêà∞ÅÖç—Ω»∞Å…ïÖÕΩ∏ËÅëÖ—Ñπ…ïÖÕΩ∏∞ÅçΩ……ï±Ö—•Ωπ%êËÅçΩπ—ï·–πùï–†âçΩ……ï±Ö—•Ωπ%êà§ÅÙ§Ï(ÄÅÖ›Ö•–ÅÖ’ë•–°çΩπ—ï·–πïπÿπ∞ÅÏÅÖç—Ω»∞ÅÖç—•Ω∏ËÄâM}1=Mà∞Åïπ—•—ÂQÂ¡îËÄâçΩµ¡±Ö•π–à∞Åïπ—•—Â%êËÅçΩµ¡±Ö•π–π•ê∞Åπï›YÖ±’îËÅÏÅΩ’—çΩµîËÅëÖ—ÑπΩ’—çΩµî∞Å—…ÖπÕôï…=¡ïπç—•ΩπÃËÅëÖ—Ñπ—…ÖπÕôï…=¡ïπç—•ΩπÃÅÙ∞ÅçΩ……ï±Ö—•Ωπ%êËÅçΩπ—ï·–πùï–†âçΩ……ï±Ö—•Ωπ%êà§∞Å…ïÖÕΩ∏ËÅëÖ—Ñπ…ïÖÕΩ∏∞ÅÕΩ’…çîËÄâ%9QI90àÅÙ§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞ÅÏÅÕ—Ö—’ÃËÄâ±ΩÕïêàÅÙ§§Ï)Ù§Ï()•π—ï…πÖ±¡§π¡ΩÕ–†àΩçÖÕïÃºÈçÖÕï%êΩ…ïΩ¡ï∏à∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅÖÕÕï…—9Ω—IïÖë=π±‰°Öç—Ω»§Ï(ÄÅÖÕÕï…—IΩ±î°Öç—Ω»∞ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hà∞Äâ5959Q}AAI=YHât§Ï(ÄÅçΩπÕ–ÅçΩµ¡±Ö•π–ÄÙÅÖ›Ö•–Å…ï≈’•…ïÖÕî°çΩπ—ï·–∞ÅçΩπ—ï·–π…ïƒπ¡Ö…Ö¥†âçÖÕï%êà§§Ï(ÄÅ•òÄ°çΩµ¡±Ö•π–πÕ—Ö—’ÃÄÑÙÙÄâ±ΩÕïêà§Å—°…Ω‹Åπï‹Å……Ω»†â%9Y1%}MQQà§Ï(ÄÅçΩπÕ–ÅëÖ—ÑÄÙÅ…ïΩ¡ïπMç°ïµÑπ¡Ö…Õî°Ö›Ö•–ÅçΩπ—ï·–π…ïƒπ©ÕΩ∏†§§Ï(ÄÅ•òÄ°ëÖ—ÑπÖ’—°Ω…•Õ•πù=ôô•çï…%êÄÙÙÙÅÖç—Ω»π•êÄòòÄÖÖç—Ω»π…Ω±ïÃπ•πç±’ëïÃ†â5959Q}AAI=YHà§ÄòòÄÖÖç—Ω»π…Ω±ïÃπ•πç±’ëïÃ†âMeMQ5}5%9%MQIQ=Hà§§Å—°…Ω‹Åπï‹Å……Ω»†â=I	%8à§Ï(ÄÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âUAQÅçΩµ¡±Ö•π—ÃÅMPÅ…ïΩ¡ïπïë}Ö–ÄÙÅUII9Q}Q%5MQ5@∞Åç±ΩÕïë}Ö–ÄÙÅç±ΩÕïë}Ö–∞Å’¡ëÖ—ïë}â‰ÄÙÄ¸Å]!IÅ•êÄÙÄ¸à§πâ•πê°Öç—Ω»π•ê∞ÅçΩµ¡±Ö•π–π•ê§π…’∏†§Ï(ÄÅÖ›Ö•–Åç°ÖπùïM—Ö—’Ã°çΩπ—ï·–πïπÿπ∞ÅÏÅçΩµ¡±Ö•π—%êËÅçΩµ¡±Ö•π–π•ê∞Åô…Ω¥ËÄâ±ΩÕïêà∞Å—ºËÄâIïΩ¡ïπïêà∞ÅÖç—Ω»∞Å…ïÖÕΩ∏ËÅëÖ—Ñπ…ïÖÕΩ∏∞ÅçΩ……ï±Ö—•Ωπ%êËÅçΩπ—ï·–πùï–†âçΩ……ï±Ö—•Ωπ%êà§ÅÙ§Ï(ÄÅÖ›Ö•–ÅÖ’ë•–°çΩπ—ï·–πïπÿπ∞ÅÏÅÖç—Ω»∞ÅÖç—•Ω∏ËÄâM}I=A9à∞Åïπ—•—ÂQÂ¡îËÄâçΩµ¡±Ö•π–à∞Åïπ—•—Â%êËÅçΩµ¡±Ö•π–π•ê∞Åπï›YÖ±’îËÅÏÅ¡…ïŸ•Ω’Õ±ΩÕ’…ïÖ—îËÅçΩµ¡±Ö•π–πç±ΩÕïë}Ö–∞ÅÖ’—°Ω…•Õ•πù=ôô•çï…%êËÅëÖ—ÑπÖ’—°Ω…•Õ•πù=ôô•çï…%êÅÙ∞ÅçΩ……ï±Ö—•Ωπ%êËÅçΩπ—ï·–πùï–†âçΩ……ï±Ö—•Ωπ%êà§∞Å…ïÖÕΩ∏ËÅëÖ—Ñπ…ïÖÕΩ∏∞ÅÕΩ’…çîËÄâ%9QI90àÅÙ§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞ÅÏÅÕ—Ö—’ÃËÄâIïΩ¡ïπïêàÅÙ§§Ï)Ù§Ï()•π—ï…πÖ±¡§πùï–†àΩÖ¡¡…ΩŸÖ±Ãà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅÖÕÕï…—IΩ±î°Öç—Ω»∞ÅlâMeMQ5}5%9%MQIQ=Hà∞ÄâIY%]Hà∞Äâ5959Q}AAI=YHà∞Äâ%9QI%Qe}5%9%MQIQ=Hà∞ÄâU%Q=Hât§Ï(ÄÅçΩπÕ–Å…Ω›ÃÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÅÅM1PÅåπçÖÕï}•ê∞Ååπ—•—±î∞Ååπ…•Õ≠}…Ö—•πú∞ÅåπÕ—Ö—’Ã∞Ååπ’¡ëÖ—ïë}Ö–∞(ÄÄÄÄÄÄ°M1PÅ5`°Ÿï…Õ•Ω∏§ÅI=4ÅÖ¡¡…ΩŸÖ±}Ÿï…Õ•ΩπÃÅÖÿÅ]!IÅÖÿπçΩµ¡±Ö•π—}•êÄÙÅåπ•ê§ÅLÅŸï…Õ•Ω∏(ÄÄÄÄÅI=4ÅçΩµ¡±Ö•π—ÃÅåÅ]!IÅåπëï±ï—ïë}Ö–Å%LÅ9U10Å9ÅåπÕ—Ö—’ÃÅ%8Ä†ùAïπë•πúÅIïŸ•ï‹ú∞ùAïπë•πúÅ5ÖπÖùïµïπ–Åïç•Õ•Ω∏ú§Å=IHÅ	dÅåπ…•Õ≠}…Ö—•πú∞Ååπ’¡ëÖ—ïë}Ö—Ä∞(ÄÄ§πÖ±∞†§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞Å…Ω›Ãπ…ïÕ’±—Ã§§Ï)Ù§Ï()•π—ï…πÖ±¡§πùï–†àΩçΩ……ïç—•ŸîµÖç—•ΩπÃà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅçΩπÕ–ÅÕçΩ¡îÄÙÅÖç—Ω»π…Ω±ïÃπÕΩµî†°…Ω±î§ÄÙ¯ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hà∞ÄâIY%]Hà∞Äâ5959Q}AAI=YHà∞ÄâU%Q=Hâtπ•πç±’ëïÃ°…Ω±î§§Ä¸ÄàƒÙƒàÄËÄâçÑπÖç—•Ωπ}Ω›πï…}•êÄÙÄ¸àÏ(ÄÅçΩπÕ–Å…Ω›ÃÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÅÅM1PÅçÑ∏®∞ÅåπçÖÕï}•ê∞Ååπ—•—±îÅLÅçÖÕï}—•—±î∞Å‘πë•Õ¡±ÖÂ}πÖµîÅLÅΩ›πï…}πÖµî∞(ÄÄÄÄÄÅMÅ]!8ÅçÑπ—Ö…ùï—}ëÖ—îÄÅëÖ—î†ùπΩ‹ú§Å9ÅçÑπÕ—Ö—’ÃÅ9=PÅ%8Ä†ù±ΩÕïêú∞ùIï©ïç—ïêú§ÅQ!8ÄƒÅ1MÄ¿Å9ÅLÅ•Õ}ΩŸï…ë’î(ÄÄÄÄÅI=4ÅçΩ……ïç—•Ÿï}Öç—•ΩπÃÅçÑÅ)=%8ÅçΩµ¡±Ö•π—ÃÅåÅ=8Ååπ•êÄÙÅçÑπçΩµ¡±Ö•π—}•êÅ)=%8Å’Õï…ÃÅ‘Å=8Å‘π•êÄÙÅçÑπÖç—•Ωπ}Ω›πï…}•ê(ÄÄÄÄÅ]!IÅçÑπëï±ï—ïë}Ö–Å%LÅ9U10Å9ÄëÌÕçΩ¡ïÙÅ=IHÅ	dÅ•Õ}ΩŸï…ë’îÅM∞ÅçÑπ—Ö…ùï—}ëÖ—ïÄ∞(ÄÄ§πâ•πê†∏∏∏°ÕçΩ¡îÄÙÙÙÄàƒÙƒàÄ¸ÅmtÄËÅmÖç—Ω»π•ët§§πÖ±∞†§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞Å…Ω›Ãπ…ïÕ’±—Ã§§Ï)Ù§Ï()•π—ï…πÖ±¡§πùï–†àΩπΩ—•ô•çÖ—•ΩπÃà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅçΩπÕ–Å…Ω›ÃÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÅÅM1PÅ•ê∞ÅïŸïπ—}—Â¡î∞ÅÕ’â©ïç–∞ÅâΩë‰∞ÅÖç—•Ωπ}’…∞∞Åëï±•Ÿï…Â}Õ—Ö—’Ã∞Å…ïÖë}Ö–∞Åç…ïÖ—ïë}Ö–(ÄÄÄÄÅI=4ÅπΩ—•ô•çÖ—•ΩπÃÅ]!IÅ’Õï…}•êÄÙÄ¸Å=HÅ’Õï…}•êÅ%LÅ9U10Å=IHÅ	dÅç…ïÖ—ïë}Ö–ÅMÅ1%5%PÄƒ¿¡Ä∞(ÄÄ§πâ•πê°Öç—Ω»π•ê§πÖ±∞†§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞Å…Ω›Ãπ…ïÕ’±—Ã§§Ï)Ù§Ï()•π—ï…πÖ±¡§π¡ΩÕ–†àΩπΩ—•ô•çÖ—•ΩπÃºÈ•êΩ…ïÖêà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âUAQÅπΩ—•ô•çÖ—•ΩπÃÅMPÅ…ïÖë}Ö–ÄÙÅUII9Q}Q%5MQ5@Å]!IÅ•êÄÙÄ¸Å9Ä°’Õï…}•êÄÙÄ¸Å=HÅ’Õï…}•êÅ%LÅ9U10§à§πâ•πê°çΩπ—ï·–π…ïƒπ¡Ö…Ö¥†â•êà§∞ÅÖç—Ω»π•ê§π…’∏†§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞ÅÏÅ…ïÖêËÅ—…’îÅÙ§§Ï)Ù§Ï()•π—ï…πÖ±¡§πùï–†àΩ’Õï…Ãà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅÖÕÕï…—IΩ±î°çΩπ—ï·–πùï–†âÖç—Ω»à§∞ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hât§Ï(ÄÅçΩπÕ–Å…Ω›ÃÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÅÅM1PÅ‘π•ê∞Å‘πïµÖ•∞∞Å‘πë•Õ¡±ÖÂ}πÖµî∞Å‘πëï¡Ö…—µïπ–∞Å‘πÖç—•Ÿî∞(ÄÄÄÄÄÅI=UA}=9P°»πçΩëî§ÅLÅ…Ω±ïÃÅI=4Å’Õï…ÃÅ‘(ÄÄÄÄÅ1PÅ)=%8Å’Õï…}…Ω±ïÃÅ’»Å=8Å’»π’Õï…}•êÄÙÅ‘π•êÅ1PÅ)=%8Å…Ω±ïÃÅ»Å=8Å»π•êÄÙÅ’»π…Ω±ï}•ê(ÄÄÄÄÅ]!IÅ‘πëï±ï—ïë}Ö–Å%LÅ9U10ÅI=U@Å	dÅ‘π•êÅ=IHÅ	dÅ‘πë•Õ¡±ÖÂ}πÖµïÄ∞(ÄÄ§πÖ±∞†§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞Å…Ω›Ãπ…ïÕ’±—Ã§§Ï)Ù§Ï()•π—ï…πÖ±¡§π¡ΩÕ–†àΩ’Õï…Ãà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅÖÕÕï…—IΩ±î°Öç—Ω»∞ÅlâMeMQ5}5%9%MQIQ=Hât§Ï(ÄÅçΩπÕ–ÅëÖ—ÑÄÙÅ’Õï…Mç°ïµÑπ¡Ö…Õî°Ö›Ö•–ÅçΩπ—ï·–π…ïƒπ©ÕΩ∏†§§Ï(ÄÅ•òÄ†ÖëÖ—ÑπïµÖ•∞π—Ω1Ω›ï…ÖÕî†§πïπëÕ]•—†°Å ëÌçΩπ—ï·–πïπÿπ11=]}5%1}=5%8π—Ω1Ω›ï…ÖÕî†•ıÄ§§Å—°…Ω‹Åπï‹Å……Ω»†â%9Y1%}5%1}=5%8à§Ï(ÄÅçΩπÕ–Å…Ω±ïÃÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î°ÅM1PÅ•ê∞ÅçΩëîÅI=4Å…Ω±ïÃÅ]!IÅçΩëîÅ%8Ä†ëÌëÖ—Ñπ…Ω±ïÃπµÖ¿††§ÄÙ¯Äà¸à§π©Ω•∏†à∞à•Ù•Ä§πâ•πê†∏∏πëÖ—Ñπ…Ω±ïÃ§πÖ±∞ÒÏÅ•êËÅÕ—…•πúÏÅçΩëîËÅIΩ±ïΩëîÅÙ¯†§Ï(ÄÅ•òÄ°…Ω±ïÃπ…ïÕ’±—Ãπ±ïπù—†ÄÑÙÙÅπï‹ÅMï–°ëÖ—Ñπ…Ω±ïÃ§πÕ•Èî§Å—°…Ω‹Åπï‹Å……Ω»†â%9Y1%}I=1à§Ï(ÄÅçΩπÕ–Å•êÄÙÅç…Â¡—ºπ…ÖπëΩµUU%†§Ï(ÄÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππâÖ—ç†°l(ÄÄÄÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†â%9MIPÅ%9Q<Å’Õï…ÃÄ°•ê∞ÅïµÖ•∞∞Åë•Õ¡±ÖÂ}πÖµî∞Åëï¡Ö…—µïπ–§ÅY1ULÄ†¸∞Ä¸∞Ä¸∞Ä¸§à§πâ•πê°•ê∞ÅëÖ—ÑπïµÖ•∞π—Ω1Ω›ï…ÖÕî†§∞ÅëÖ—Ñπë•Õ¡±ÖÂ9Öµî∞ÅëÖ—Ñπëï¡Ö…—µïπ–Ä¸¸Åπ’±∞§∞(ÄÄÄÄ∏∏π…Ω±ïÃπ…ïÕ’±—ÃπµÖ¿†°…Ω±î§ÄÙ¯ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†â%9MIPÅ%9Q<Å’Õï…}…Ω±ïÃÄ°’Õï…}•ê∞Å…Ω±ï}•ê∞Åù…Öπ—ïë}â‰§ÅY1ULÄ†¸∞Ä¸∞Ä¸§à§πâ•πê°•ê∞Å…Ω±îπ•ê∞ÅÖç—Ω»π•ê§§∞(ÄÅt§Ï(ÄÅÖ›Ö•–ÅÖ’ë•–°çΩπ—ï·–πïπÿπ∞ÅÏÅÖç—Ω»∞ÅÖç—•Ω∏ËÄâUMI}IQà∞Åïπ—•—ÂQÂ¡îËÄâ’Õï»à∞Åïπ—•—Â%êËÅ•ê∞Åπï›YÖ±’îËÅÏÅïµÖ•∞ËÅëÖ—ÑπïµÖ•∞π—Ω1Ω›ï…ÖÕî†§∞Å…Ω±ïÃËÅëÖ—Ñπ…Ω±ïÃÅÙ∞ÅçΩ……ï±Ö—•Ωπ%êËÅçΩπ—ï·–πùï–†âçΩ……ï±Ö—•Ωπ%êà§∞ÅÕΩ’…çîËÄâ%9QI90àÅÙ§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞ÅÏÅ•êÅÙ§∞Ä»¿ƒ§Ï)Ù§Ï()•π—ï…πÖ±¡§πùï–†àΩÕï——•πùÃà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅÖÕÕï…—IΩ±î°çΩπ—ï·–πùï–†âÖç—Ω»à§∞ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hât§Ï(ÄÅçΩπÕ–ÅmÕï——•πùÃ∞ÅÕ±ÖtÄÙÅÖ›Ö•–ÅA…Ωµ•ÕîπÖ±∞°l(ÄÄÄÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âM1PÅÕï——•πù}≠ï‰∞ÅÕï——•πù}ŸÖ±’î∞Å’¡ëÖ—ïë}Ö–ÅI=4ÅÖ¡¡±•çÖ—•Ωπ}Õï——•πùÃÅ]!IÅ•Õ}Õïç…ï–ÄÙÄ¿Å=IHÅ	dÅÕï——•πù}≠ï‰à§πÖ±∞†§∞(ÄÄÄÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âM1PÅÕ»∏®∞ÅçåππÖµîÅLÅçÖ—ïùΩ…Â}πÖµîÅI=4ÅÕ±Ö}…’±ïÃÅÕ»Å1PÅ)=%8ÅçΩµ¡±Ö•π—}çÖ—ïùΩ…•ïÃÅçåÅ=8Åçåπ•êÄÙÅÕ»πçÖ—ïùΩ…Â}•êÅ=IHÅ	dÅÕ»π…•Õ≠}±ïŸï∞∞ÅçåππÖµîà§πÖ±∞†§∞(ÄÅt§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞ÅÏÅÕï——•πùÃËÅÕï——•πùÃπ…ïÕ’±—Ã∞ÅÕ±ÖI’±ïÃËÅÕ±Ñπ…ïÕ’±—ÃÅÙ§§Ï)Ù§Ï()•π—ï…πÖ±¡§π¡’–†àΩÕï——•πùÃΩÕ±Ñà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅÖÕÕï…—IΩ±î°Öç—Ω»∞ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hât§Ï(ÄÅçΩπÕ–ÅëÖ—ÑÄÙÅËπΩâ©ïç–°ÏÅ…•Õ≠1ïŸï∞ËÅËπïπ’¥°lâ…•—•çÖ∞à∞Äâ!•ù†à∞Äâ5ïë•’¥à∞Äâ1Ω‹ât§∞ÅçÖ—ïùΩ…Â%êËÅËπÕ—…•πú†§πΩ¡—•ΩπÖ∞†§ππ’±±Öâ±î†§∞Å—Ö…ùï—	’Õ•πïÕÕÖÂÃËÅËππ’µâï»†§π•π–†§πµ•∏†ƒ§πµÖ‡†Ãÿ‘§ÅÙ§π¡Ö…Õî°Ö›Ö•–ÅçΩπ—ï·–π…ïƒπ©ÕΩ∏†§§Ï(ÄÅçΩπÕ–Åï·•Õ—•πúÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âM1PÅ•êÅI=4ÅÕ±Ö}…’±ïÃÅ]!IÅ…•Õ≠}±ïŸï∞ÄÙÄ¸Å9ÅçÖ—ïùΩ…Â}•êÅ%LÄ¸à§πâ•πê°ëÖ—Ñπ…•Õ≠1ïŸï∞∞ÅëÖ—ÑπçÖ—ïùΩ…Â%êÄ¸¸Åπ’±∞§πô•…Õ–ÒÏÅ•êËÅÕ—…•πúÅÙ¯†§Ï(ÄÅçΩπÕ–Å•êÄÙÅï·•Õ—•πú¸π•êÄ¸¸Åç…Â¡—ºπ…ÖπëΩµUU%†§Ï(ÄÅ•òÄ°ï·•Õ—•πú§ÅÏ(ÄÄÄÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†âUAQÅÕ±Ö}…’±ïÃÅMPÅ—Ö…ùï—}â’Õ•πïÕÕ}ëÖÂÃÄÙÄ¸∞Å’¡ëÖ—ïë}Ö–ÄÙÅUII9Q}Q%5MQ5@Å]!IÅ•êÄÙÄ¸à§(ÄÄÄÄÄÄπâ•πê°ëÖ—Ñπ—Ö…ùï—	’Õ•πïÕÕÖÂÃ∞Å•ê§π…’∏†§Ï(ÄÅÙÅï±ÕîÅÏ(ÄÄÄÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†â%9MIPÅ%9Q<ÅÕ±Ö}…’±ïÃÄ°•ê∞ÅçÖ—ïùΩ…Â}•ê∞Å…•Õ≠}±ïŸï∞∞Å—Ö…ùï—}â’Õ•πïÕÕ}ëÖÂÃ§ÅY1ULÄ†¸∞Ä¸∞Ä¸∞Ä¸§à§(ÄÄÄÄÄÄπâ•πê°•ê∞ÅëÖ—ÑπçÖ—ïùΩ…Â%êÄ¸¸Åπ’±∞∞ÅëÖ—Ñπ…•Õ≠1ïŸï∞∞ÅëÖ—Ñπ—Ö…ùï—	’Õ•πïÕÕÖÂÃ§π…’∏†§Ï(ÄÅÙ(ÄÅÖ›Ö•–ÅÖ’ë•–°çΩπ—ï·–πïπÿπ∞ÅÏÅÖç—Ω»∞ÅÖç—•Ω∏ËÄâM1}IU1}UAQà∞Åïπ—•—ÂQÂ¡îËÄâÕ±Ö}…’±îà∞Åïπ—•—Â%êËÅ•ê∞Åπï›YÖ±’îËÅëÖ—Ñ∞ÅçΩ……ï±Ö—•Ωπ%êËÅçΩπ—ï·–πùï–†âçΩ……ï±Ö—•Ωπ%êà§∞ÅÕΩ’…çîËÄâ%9QI90àÅÙ§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞ÅÏÅ•êÅÙ§§Ï)Ù§Ï()•π—ï…πÖ±¡§πùï–†àΩÖ’ë•–à∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅÖÕÕï…—IΩ±î°çΩπ—ï·–πùï–†âÖç—Ω»à§∞ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hà∞ÄâU%Q=Hât§Ï(ÄÅçΩπÕ–Å≈’ï…‰ÄÙÅçΩπ—ï·–π…ïƒπ≈’ï…‰†§Ï(ÄÅçΩπÕ–ÅŸÖ±’ïÃËÅ’π≠πΩ›πmtÄÙÅmtÏ(ÄÅçΩπÕ–Åô•±—ï…ÃÄÙÅlàƒÙƒâtÏ(ÄÅ•òÄ°≈’ï…‰πïπ—•—ÂQÂ¡î§ÅÏÅô•±—ï…Ãπ¡’Õ††âÑπïπ—•—Â}—Â¡îÄÙÄ¸à§ÏÅŸÖ±’ïÃπ¡’Õ†°≈’ï…‰πïπ—•—ÂQÂ¡î§ÏÅÙ(ÄÅ•òÄ°≈’ï…‰πÖç—•Ω∏§ÅÏÅô•±—ï…Ãπ¡’Õ††âÑπÖç—•Ω∏ÄÙÄ¸à§ÏÅŸÖ±’ïÃπ¡’Õ†°≈’ï…‰πÖç—•Ω∏§ÏÅÙ(ÄÅ•òÄ°≈’ï…‰πÕïÖ…ç†§ÅÏÅô•±—ï…Ãπ¡’Õ††à°Ñπïπ—•—Â}•êÅ1%-Ä¸Å=HÅÑπçΩ……ï±Ö—•Ωπ}•êÅ1%-Ä¸§à§ÏÅŸÖ±’ïÃπ¡’Õ†°ÄîëÌ≈’ï…‰πÕïÖ…ç°ÙïÄ∞ÅÄîëÌ≈’ï…‰πÕïÖ…ç°ÙïÄ§ÏÅÙ(ÄÅçΩπÕ–Å…Ω›ÃÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÅÅM1PÅÑπ•ê∞ÅÑπÖç—•Ω∏∞ÅÑπïπ—•—Â}—Â¡î∞ÅÑπïπ—•—Â}•ê∞ÅÑπ—•µïÕ—Öµ¿∞ÅÑπçΩ……ï±Ö—•Ωπ}•ê∞ÅÑπ…ïÖÕΩ∏∞ÅÑπÕΩ’…çî∞Å‘πë•Õ¡±ÖÂ}πÖµîÅLÅ’Õï…}πÖµî(ÄÄÄÄÅI=4ÅÖ’ë•—}±ΩùÃÅÑÅ1PÅ)=%8Å’Õï…ÃÅ‘Å=8Å‘π•êÄÙÅÑπ’Õï…}•êÅ]!IÄëÌô•±—ï…Ãπ©Ω•∏†àÅ9Äà•ÙÅ=IHÅ	dÅÑπ—•µïÕ—Öµ¿ÅMÅ1%5%PÄ»‘¡Ä∞(ÄÄ§πâ•πê†∏∏πŸÖ±’ïÃ§πÖ±∞†§Ï(ÄÅ…ï—’…∏ÅçΩπ—ï·–π©ÕΩ∏°ïπŸï±Ω¡î°çΩπ—ï·–∞Å…Ω›Ãπ…ïÕ’±—Ã§§Ï)Ù§Ï()•π—ï…πÖ±¡§πùï–†àΩ…ï¡Ω…—ÃΩï·¡Ω…–πçÕÿà∞ÅÖÕÂπåÄ°çΩπ—ï·–§ÄÙ¯ÅÏ(ÄÅçΩπÕ–ÅÖç—Ω»ÄÙÅçΩπ—ï·–πùï–†âÖç—Ω»à§Ï(ÄÅÖÕÕï…—IΩ±î°Öç—Ω»∞ÅlâMeMQ5}5%9%MQIQ=Hà∞Äâ%9QI%Qe}5%9%MQIQ=Hà∞Äâ%9QI%Qe}=%Hà∞ÄâIY%]Hà∞Äâ5959Q}AAI=YHà∞ÄâU%Q=Hât§Ï(ÄÅçΩπÕ–ÅÕçΩ¡îÄÙÅçÖÕï1•Õ—MçΩ¡î°Öç—Ω»§Ï(ÄÅçΩπÕ–Å…Ω›ÃÄÙÅÖ›Ö•–ÅçΩπ—ï·–πïπÿππ¡…ï¡Ö…î†(ÄÄÄÅÅM1PÅåπçÖÕï}•ê∞Ååπç…ïÖ—ïë}Ö–∞ÅçåππÖµîÅLÅçÖ—ïùΩ…‰∞Ååπëï¡Ö…—µïπ–∞Ååπ…•Õ≠}…Ö—•πú∞ÅåπÕ—Ö—’Ã∞ÅåπÕ±Ö}ë’ï}Ö–∞(ÄÄÄÄÄÅåπ•πŸïÕ—•ùÖ—•Ωπ}Ω’—çΩµî∞Ååπç±ΩÕïë}Ö–(ÄÄÄÄÅI=4ÅçΩµ¡±Ö•π—ÃÅåÅ)=%8ÅçΩµ¡±Ö•π—}çÖ—ïùΩ…•ïÃÅçåÅ=8Åçåπ•êÄÙÅåπçÖ—ïùΩ…Â}•ê(ÄÄÄÄÅ]!IÅåπëï±ï—ïë}Ö–Å%LÅ9U10Å9ÄëÌÕçΩ¡îπç±Ö’ÕïÙÅ=IHÅ	dÅåπç…ïÖ—ïë}Ö–ÅMÄ∞(ÄÄ§πâ•πê†∏∏πÕçΩ¡îπŸÖ±’ïÃ§πÖ±∞ÒIïçΩ…êÒÕ—…•πú∞Å’π≠πΩ›∏¯¯†§Ï(ÄÅçΩπÕ–Å°ïÖëï…ÃÄÙÅlâçÖÕï}•êà∞Äâç…ïÖ—ïë}Ö–à∞ÄâçÖ—ïùΩ…‰à∞Äâëï¡Ö…—µïπ–à∞Äâ…•Õ≠}…Ö—•πúà∞ÄâÕ—Ö—’Ãà∞ÄâÕ±Ö}ë’ï}Ö–à∞Äâ•πŸïÕ—•ùÖ—•Ωπ}Ω’—çΩµîà∞Äâç±ΩÕïë}Ö–âtÏ(ÄÅçΩπÕ–Åçï±∞ÄÙÄ°ŸÖ±’îËÅ’π≠πΩ›∏§ÄÙ¯ÅÄàëÌM—…•πú°ŸÖ±’îÄ¸¸Äàà§π…ï¡±Öçï±∞†úàú∞Äúààú•ÙâÄÏ(ÄÅçΩπÕ–ÅçÕÿÄÙÅm°ïÖëï…Ãπ©Ω•∏†à∞à§∞Ä∏∏π…Ω›Ãπ…ïÕ’±—ÃπµÖ¿†°…Ω‹§ÄÙ¯Å°ïÖëï…ÃπµÖ¿†°°ïÖëï»§ÄÙ¯Åçï±∞°…Ω›m°ïÖëï…t§§π©Ω•∏†à∞à§•tπ©Ω•∏†âq…q∏à§Ï(ÄÅ…ï—’…∏Åπï‹ÅIïÕ¡ΩπÕî°çÕÿ∞ÅÏÅ°ïÖëï…ÃËÅÏÄâΩπ—ïπ–µQÂ¡îàËÄâ—ï·–ΩçÕÿÏÅç°Ö…Õï–ı’—ò¥‡à∞ÄâΩπ—ïπ–µ•Õ¡ΩÕ•—•Ω∏àËÅÅÖ——Öç°µïπ–ÏÅô•±ïπÖµîÙâçΩµ¡±Ö•π–µ…ï¡Ω…–¥ëÌπï‹ÅÖ—î†§π—Ω%M=M—…•πú†§πÕ±•çî†¿∞Äƒ¿•ÙπçÕÿâÄ∞ÄâÖç°îµΩπ—…Ω∞àËÄâ¡…•ŸÖ—î∞ÅπºµÕ—Ω…îàÅÙÅÙ§Ï)Ù§Ï(
+    ...data.supportingOfficerIds.map((supportingOfficerId) =>
+      context.env.DB.prepare(
+        "INSERT INTO complaint_assignments (id, complaint_id, user_id, reviewer_id, assignment_type, scope, instructions, assigned_by) VALUES (?, ?, ?, ?, 'SUPPORTING', ?, ?, ?)",
+      ).bind(crypto.randomUUID(), complaint.id, supportingOfficerId, reviewer?.id ?? null, data.scope, data.instructions, actor.id),
+    ),
+  ];
+  await context.env.DB.batch(statements);
+  await context.env.DB.prepare(
+    "UPDATE complaints SET investigation_due_at = ?, priority = ?, next_action = 'Commence investigation', next_action_due_at = ?, updated_by = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+  ).bind(data.dueDate, data.priority, data.dueDate, actor.id, complaint.id).run();
+  if (complaint.status === "Pending Assignment" || complaint.status === "Reopened") {
+    assertTransition(complaint.status as ComplaintStatus, "Investigation Ongoing");
+    await changeStatus(context.env.DB, {
+      complaintId: complaint.id, from: complaint.status, to: "Investigation Ongoing", actor,
+      reason: data.reason, correlationId: context.get("correlationId"),
+    });
+  }
+  await audit(context.env.DB, {
+    actor, action: complaint.assigned_officer ? "CASE_REASSIGNED" : "CASE_ASSIGNED",
+    entityType: "complaint", entityId: complaint.id, newValue: data,
+    correlationId: context.get("correlationId"), reason: data.reason, source: "INTERNAL",
+  });
+  await notify(context.env, {
+    eventType: "CASE_ASSIGNED", subject: "Case assigned: " + complaint.case_id,
+    body: "You have been assigned as primary case officer.", userId: data.primaryOfficerId,
+    complaintId: complaint.id, actionUrl: "/portal/cases/" + complaint.case_id,
+    idempotencyKey: "assignment:" + complaint.id + ":" + data.primaryOfficerId + ":" + Date.now(),
+  });
+  return context.json(envelope(context, { status: "Investigation Ongoing" }), 201);
+});
+
+internalApi.post("/cases/:caseId/activities", async (context) => {
+  const actor = context.get("actor");
+  assertNotReadOnly(actor);
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "INTEGRITY_OFFICER", "CASE_OFFICER"]);
+  const complaint = await requireCase(context, context.req.param("caseId"));
+  if (!(["Investigation Ongoing", "Returned for Amendment", "Reopened"] as string[]).includes(complaint.status)) throw new Error("INVALID_STATE");
+  const data = activitySchema.parse(await context.req.json());
+  const id = crypto.randomUUID();
+  await context.env.DB.prepare(
+    "INSERT INTO investigation_activities (id, complaint_id, activity_type, occurred_at, officer_id, description, next_action, next_action_due_at, attachment_references, visibility) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+  ).bind(id, complaint.id, data.activityType, data.occurredAt, actor.id, data.description, data.nextAction ?? null, data.nextActionDueAt ?? null, JSON.stringify(data.attachmentIds), data.visibility).run();
+  await context.env.DB.prepare(
+    "UPDATE complaints SET last_action_at = CURRENT_TIMESTAMP, next_action = ?, next_action_due_at = ?, updated_by = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+  ).bind(data.nextAction ?? null, data.nextActionDueAt ?? null, actor.id, complaint.id).run();
+  await audit(context.env.DB, {
+    actor, action: "INVESTIGATION_ACTIVITY_ADDED", entityType: "investigation_activity", entityId: id,
+    newValue: data, correlationId: context.get("correlationId"), source: "INTERNAL",
+  });
+  return context.json(envelope(context, { id }), 201);
+});
+
+internalApi.post("/cases/:caseId/evidence", async (context) => {
+  const actor = context.get("actor");
+  assertNotReadOnly(actor);
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "INTEGRITY_OFFICER", "CASE_OFFICER"]);
+  const complaint = await requireCase(context, context.req.param("caseId"));
+  const form = await context.req.formData();
+  const file = form.get("file");
+  if (!(file instanceof File)) throw new Error("FILE_REQUIRED");
+  const classification = String(form.get("classification") ?? "Confidential");
+  if (!(["Restricted", "Confidential", "Internal", "General"] as string[]).includes(classification)) throw new Error("INVALID_CLASSIFICATION");
+  const validation = validateUpload(file, Number(context.env.MAX_UPLOAD_BYTES));
+  if (!validation.ok) throw new Error(validation.reason);
+  const buffer = await file.arrayBuffer();
+  if (!validateFileSignature(buffer, file.type)) throw new Error("FILE_SIGNATURE_MISMATCH");
+  const checksum = await sha256(buffer);
+  const id = crypto.randomUUID();
+  const objectKey = "internal/" + complaint.id + "/" + crypto.randomUUID();
+  await context.env.EVIDENCE.put(objectKey, buffer, {
+    httpMetadata: { contentType: file.type },
+    customMetadata: { attachmentId: id, caseId: complaint.case_id, originalFilename: validation.filename },
+  });
+  await context.env.DB.prepare(
+    "INSERT INTO attachments (id, complaint_id, object_key, original_filename, content_type, file_size, checksum_sha256, classification, source, uploader_user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'INTERNAL_EVIDENCE', ?)",
+  ).bind(id, complaint.id, objectKey, validation.filename, file.type, file.size, checksum, classification, actor.id).run();
+  await audit(context.env.DB, {
+    actor, action: "EVIDENCE_UPLOADED", entityType: "attachment", entityId: id,
+    newValue: { filename: validation.filename, size: file.size, checksum, classification },
+    correlationId: context.get("correlationId"), source: "INTERNAL",
+  });
+  return context.json(envelope(context, { id, checksum }), 201);
+});
+
+internalApi.get("/evidence/:attachmentId/download", async (context) => {
+  const actor = context.get("actor");
+  const attachment = await context.env.DB.prepare(
+    "SELECT a.*, c.case_id FROM attachments a JOIN complaints c ON c.id = a.complaint_id WHERE a.id = ? AND a.deleted_at IS NULL",
+  ).bind(context.req.param("attachmentId")).first<any>();
+  if (!attachment) throw new Error("NOT_FOUND");
+  if (!(await canAccessCase(context.env.DB, actor, attachment.complaint_id))) throw new Error("FORBIDDEN");
+  const object = await context.env.EVIDENCE.get(attachment.object_key);
+  if (!object) throw new Error("NOT_FOUND");
+  await audit(context.env.DB, {
+    actor, action: "EVIDENCE_DOWNLOADED", entityType: "attachment", entityId: attachment.id,
+    correlationId: context.get("correlationId"), source: "INTERNAL",
+  });
+  const filename = safeFilename(attachment.original_filename);
+  return new Response(object.body, {
+    headers: {
+      "Content-Type": attachment.content_type,
+      "Content-Disposition": "attachment; filename*=UTF-8''" + encodeURIComponent(filename),
+      "Cache-Control": "private, no-store",
+      "X-Content-Type-Options": "nosniff",
+    },
+  });
+});
+
+internalApi.delete("/evidence/:attachmentId", async (context) => {
+  const actor = context.get("actor");
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR"]);
+  const data = z.object({ reason: z.string().trim().min(2).max(1000) }).parse(await context.req.json());
+  const attachment = await context.env.DB.prepare(
+    "SELECT * FROM attachments WHERE id = ? AND deleted_at IS NULL",
+  ).bind(context.req.param("attachmentId")).first<any>();
+  if (!attachment) throw new Error("NOT_FOUND");
+  if (!(await canAccessCase(context.env.DB, actor, attachment.complaint_id))) throw new Error("FORBIDDEN");
+  await context.env.DB.prepare(
+    "UPDATE attachments SET deleted_at = CURRENT_TIMESTAMP, deleted_by = ?, deletion_reason = ? WHERE id = ? AND deleted_at IS NULL",
+  ).bind(actor.id, data.reason, attachment.id).run();
+  await context.env.EVIDENCE.delete(attachment.object_key);
+  await audit(context.env.DB, {
+    actor, action: "EVIDENCE_DELETED", entityType: "attachment", entityId: attachment.id,
+    correlationId: context.get("correlationId"), reason: data.reason, source: "INTERNAL",
+  });
+  return context.json(envelope(context, { deleted: true }));
+});
+
+internalApi.post("/cases/:caseId/findings", async (context) => {
+  const actor = context.get("actor");
+  assertNotReadOnly(actor);
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "INTEGRITY_OFFICER", "CASE_OFFICER"]);
+  const complaint = await requireCase(context, context.req.param("caseId"));
+  if (!(["Investigation Ongoing", "Returned for Amendment"] as string[]).includes(complaint.status)) throw new Error("INVALID_STATE");
+  const data = findingSchema.parse(await context.req.json());
+  const version = (await context.env.DB.prepare(
+    "SELECT COALESCE(MAX(version), 0) + 1 AS version FROM investigation_findings WHERE complaint_id = ?",
+  ).bind(complaint.id).first<{ version: number }>())?.version ?? 1;
+  const findingId = crypto.randomUUID();
+  const approvalVersionId = crypto.randomUUID();
+  await context.env.DB.batch([
+    context.env.DB.prepare(
+      "INSERT INTO investigation_findings (id, complaint_id, version, allegations, analysis, findings, recommendations, outcome, status, created_by, submitted_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'SUBMITTED', ?, CURRENT_TIMESTAMP)",
+    ).bind(findingId, complaint.id, version, data.allegations, data.analysis, data.findings, data.recommendations, data.outcome, actor.id),
+    context.env.DB.prepare(
+      "INSERT INTO approval_versions (id, complaint_id, finding_id, version, snapshot, created_by) VALUES (?, ?, ?, ?, ?, ?)",
+    ).bind(approvalVersionId, complaint.id, findingId, version, JSON.stringify(data), actor.id),
+  ]);
+  assertTransition(complaint.status as ComplaintStatus, "Pending Review");
+  await changeStatus(context.env.DB, {
+    complaintId: complaint.id, from: complaint.status, to: "Pending Review", actor,
+    reason: "Investigation findings version " + version + " submitted for review.",
+    correlationId: context.get("correlationId"),
+  });
+  await audit(context.env.DB, {
+    actor, action: "FINDINGS_SUBMITTED", entityType: "investigation_finding", entityId: findingId,
+    newValue: { version, outcome: data.outcome }, correlationId: context.get("correlationId"), source: "INTERNAL",
+  });
+  const reviewer = await context.env.DB.prepare(
+    "SELECT u.id FROM users u JOIN user_roles ur ON ur.user_id = u.id JOIN roles r ON r.id = ur.role_id WHERE u.active = 1 AND r.code = 'REVIEWER' ORDER BY u.display_name LIMIT 1",
+  ).first<{ id: string }>();
+  if (reviewer) await notify(context.env, {
+    eventType: "APPROVAL_REQUESTED", subject: "Review requested: " + complaint.case_id,
+    body: "Investigation findings version " + version + " require review.", userId: reviewer.id,
+    complaintId: complaint.id, actionUrl: "/portal/cases/" + complaint.case_id,
+    idempotencyKey: "review:" + complaint.id + ":" + version,
+  });
+  return context.json(envelope(context, { findingId, version }), 201);
+});
+
+internalApi.post("/cases/:caseId/approvals", async (context) => {
+  const actor = context.get("actor");
+  assertNotReadOnly(actor);
+  const complaint = await requireCase(context, context.req.param("caseId"));
+  const data = approvalSchema.parse(await context.req.json());
+  const reviewerStage = complaint.status === "Pending Review";
+  const managementStage = complaint.status === "Pending Management Decision";
+  if (!reviewerStage && !managementStage) throw new Error("INVALID_STATE");
+  if (reviewerStage) assertRole(actor, ["SYSTEM_ADMINISTRATOR", "REVIEWER"]);
+  if (managementStage) assertRole(actor, ["SYSTEM_ADMINISTRATOR", "MANAGEMENT_APPROVER"]);
+  const approvalVersion = await context.env.DB.prepare(
+    "SELECT av.id, av.finding_id FROM approval_versions av WHERE av.complaint_id = ? AND av.version = ?",
+  ).bind(complaint.id, data.version).first<{ id: string; finding_id: string }>();
+  if (!approvalVersion) throw new Error("FINDING_VERSION_NOT_FOUND");
+  const stage = reviewerStage ? "REVIEWER" : "MANAGEMENT";
+  const id = crypto.randomUUID();
+  await context.env.DB.prepare(
+    "INSERT INTO approvals (id, complaint_id, approval_version_id, stage, sequence_number, approver_id, approver_role, decision, remarks, returned_to_user_id, subsequent_action) VALUES (?, ?, ?, ?, 1, ?, ?, ?, ?, ?, ?)",
+  ).bind(id, complaint.id, approvalVersion.id, stage, actor.id, stage, data.decision, data.remarks, data.returnedToUserId ?? null, data.subsequentAction ?? null).run();
+  let target: ComplaintStatus;
+  if (data.decision === "Return for amendment" || data.decision === "Request further investigation") {
+    target = "Returned for Amendment";
+    await context.env.DB.prepare("UPDATE investigation_findings SET status = 'RETURNED' WHERE id = ?").bind(approvalVersion.finding_id).run();
+  } else if (reviewerStage) {
+    target = "Pending Management Decision";
+  } else if (data.decision === "Refer") {
+    target = "Referred";
+    await context.env.DB.prepare("UPDATE investigation_findings SET status = 'APPROVED' WHERE id = ?").bind(approvalVersion.finding_id).run();
+  } else {
+    target = "Outcome Communication Pending";
+    await context.env.DB.prepare("UPDATE investigation_findings SET status = 'APPROVED' WHERE id = ?").bind(approvalVersion.finding_id).run();
+  }
+  assertTransition(complaint.status as ComplaintStatus, target);
+  await changeStatus(context.env.DB, {
+    complaintId: complaint.id, from: complaint.status, to: target, actor,
+    reason: stage + " decision: " + data.decision + ". " + data.remarks,
+    correlationId: context.get("correlationId"),
+  });
+  await audit(context.env.DB, {
+    actor, action: "APPROVAL_DECISION_RECORDED", entityType: "approval", entityId: id,
+    newValue: { stage, decision: data.decision, version: data.version },
+    correlationId: context.get("correlationId"), reason: data.remarks, source: "INTERNAL",
+  });
+  return context.json(envelope(context, { id, status: target }), 201);
+});
+
+internalApi.post("/cases/:caseId/corrective-actions", async (context) => {
+  const actor = context.get("actor");
+  assertNotReadOnly(actor);
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "INTEGRITY_OFFICER", "REVIEWER", "MANAGEMENT_APPROVER"]);
+  const complaint = await requireCase(context, context.req.param("caseId"));
+  const data = correctiveActionSchema.parse(await context.req.json());
+  const owner = await context.env.DB.prepare("SELECT id FROM users WHERE id = ? AND active = 1").bind(data.actionOwnerId).first();
+  if (!owner) throw new Error("INVALID_ACTION_OWNER");
+  const id = crypto.randomUUID();
+  const actionId = "ACT-" + complaint.case_id.slice(4) + "-" + crypto.randomUUID().slice(0, 6).toUpperCase();
+  await context.env.DB.prepare(
+    "INSERT INTO corrective_actions (id, action_id, complaint_id, recommendation, action_owner_id, responsible_department, priority, target_date, created_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+  ).bind(id, actionId, complaint.id, data.recommendation, data.actionOwnerId, data.responsibleDepartment, data.priority, data.targetDate, actor.id).run();
+  await audit(context.env.DB, {
+    actor, action: "CORRECTIVE_ACTION_CREATED", entityType: "corrective_action", entityId: id,
+    newValue: data, correlationId: context.get("correlationId"), source: "INTERNAL",
+  });
+  await notify(context.env, {
+    eventType: "CORRECTIVE_ACTION_ASSIGNED", subject: "Corrective action assigned: " + actionId,
+    body: data.recommendation, userId: data.actionOwnerId, complaintId: complaint.id,
+    actionUrl: "/portal/actions", idempotencyKey: "action:" + id,
+  });
+  return context.json(envelope(context, { id, actionId }), 201);
+});
+
+internalApi.get("/corrective-actions", async (context) => {
+  const actor = context.get("actor");
+  const scope = caseListScope(actor);
+  const rows = await context.env.DB.prepare(
+    "SELECT ca.*, c.case_id, c.title AS case_title, u.display_name AS owner_name, CASE WHEN ca.target_date < date('now') AND ca.status NOT IN ('Completed','Closed','Rejected') THEN 1 ELSE 0 END AS is_overdue FROM corrective_actions ca JOIN complaints c ON c.id = ca.complaint_id JOIN users u ON u.id = ca.action_owner_id WHERE ca.deleted_at IS NULL AND " + scope.clause + " ORDER BY is_overdue DESC, ca.target_date",
+  ).bind(...scope.values).all();
+  return context.json(envelope(context, rows.results));
+});
+
+internalApi.patch("/corrective-actions/:actionId", async (context) => {
+  const actor = context.get("actor");
+  assertNotReadOnly(actor);
+  const data = z.object({
+    status: z.enum(["Open", "In Progress", "Pending Evidence", "Pending Verification", "Overdue", "Completed", "Closed", "Rejected"]),
+    progressUpdate: z.string().trim().min(2).max(5000),
+  }).parse(await context.req.json());
+  const action = await context.env.DB.prepare(
+    "SELECT ca.*, c.case_id FROM corrective_actions ca JOIN complaints c ON c.id = ca.complaint_id WHERE ca.action_id = ? AND ca.deleted_at IS NULL",
+  ).bind(context.req.param("actionId")).first<any>();
+  if (!action) throw new Error("NOT_FOUND");
+  const privileged = actor.roles.some((role) => (["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "INTEGRITY_OFFICER"] as RoleCode[]).includes(role));
+  if (action.action_owner_id !== actor.id && !privileged) throw new Error("FORBIDDEN");
+  if (!(await canAccessCase(context.env.DB, actor, action.complaint_id))) throw new Error("FORBIDDEN");
+  await context.env.DB.batch([
+    context.env.DB.prepare(
+      "UPDATE corrective_actions SET status = ?, progress_update = ?, completion_date = CASE WHEN ? = 'Completed' THEN CURRENT_TIMESTAMP ELSE completion_date END, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+    ).bind(data.status, data.progressUpdate, data.status, action.id),
+    context.env.DB.prepare(
+      "INSERT INTO corrective_action_updates (id, corrective_action_id, status, progress_update, updated_by) VALUES (?, ?, ?, ?, ?)",
+    ).bind(crypto.randomUUID(), action.id, data.status, data.progressUpdate, actor.id),
+  ]);
+  await audit(context.env.DB, {
+    actor, action: "CORRECTIVE_ACTION_UPDATED", entityType: "corrective_action", entityId: action.id,
+    previousValue: { status: action.status }, newValue: data,
+    correlationId: context.get("correlationId"), reason: data.progressUpdate, source: "INTERNAL",
+  });
+  return context.json(envelope(context, { status: data.status }));
+});
+
+internalApi.post("/corrective-actions/:actionId/verify", async (context) => {
+  const actor = context.get("actor");
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "INTEGRITY_OFFICER", "REVIEWER"]);
+  const data = z.object({
+    decision: z.enum(["Approve", "Reject"]),
+    remarks: z.string().trim().min(2).max(5000),
+  }).parse(await context.req.json());
+  const action = await context.env.DB.prepare(
+    "SELECT * FROM corrective_actions WHERE action_id = ? AND deleted_at IS NULL",
+  ).bind(context.req.param("actionId")).first<any>();
+  if (!action) throw new Error("NOT_FOUND");
+  if (action.action_owner_id === actor.id) throw new Error("SELF_VERIFICATION_NOT_ALLOWED");
+  if (action.status !== "Pending Verification") throw new Error("INVALID_STATE");
+  if (!(await canAccessCase(context.env.DB, actor, action.complaint_id))) throw new Error("FORBIDDEN");
+  const status = data.decision === "Approve" ? "Completed" : "Rejected";
+  await context.env.DB.prepare(
+    "UPDATE corrective_actions SET status = ?, integrity_verifier_id = ?, verification_remarks = ?, verified_at = CURRENT_TIMESTAMP, completion_date = CASE WHEN ? = 'Completed' THEN CURRENT_TIMESTAMP ELSE completion_date END, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+  ).bind(status, actor.id, data.remarks, status, action.id).run();
+  await audit(context.env.DB, {
+    actor, action: "CORRECTIVE_ACTION_VERIFIED", entityType: "corrective_action", entityId: action.id,
+    newValue: { status, decision: data.decision }, correlationId: context.get("correlationId"),
+    reason: data.remarks, source: "INTERNAL",
+  });
+  return context.json(envelope(context, { status }));
+});
+
+internalApi.post("/cases/:caseId/communications", async (context) => {
+  const actor = context.get("actor");
+  assertNotReadOnly(actor);
+  const complaint = await requireCase(context, context.req.param("caseId"));
+  const data = z.object({
+    type: z.string().trim().min(2).max(100),
+    channel: z.string().trim().min(2).max(100),
+    recipient: z.string().trim().max(500).optional(),
+    summary: z.string().trim().min(2).max(5000),
+    completed: z.boolean().default(false),
+  }).parse(await context.req.json());
+  const id = crypto.randomUUID();
+  await context.env.DB.prepare(
+    "INSERT INTO communications (id, complaint_id, communication_type, direction, channel, recipient, summary, status, created_by, completed_at) VALUES (?, ?, ?, 'OUTBOUND', ?, ?, ?, ?, ?, CASE WHEN ? = 1 THEN CURRENT_TIMESTAMP ELSE NULL END)",
+  ).bind(id, complaint.id, data.type, data.channel, data.recipient ?? null, data.summary, data.completed ? "COMPLETED" : "DRAFT", actor.id, Number(data.completed)).run();
+  await audit(context.env.DB, {
+    actor, action: "COMMUNICATION_RECORDED", entityType: "communication", entityId: id,
+    newValue: data, correlationId: context.get("correlationId"), source: "INTERNAL",
+  });
+  return context.json(envelope(context, { id }), 201);
+});
+
+internalApi.post("/cases/:caseId/close", async (context) => {
+  const actor = context.get("actor");
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "REVIEWER", "MANAGEMENT_APPROVER"]);
+  const complaint = await requireCase(context, context.req.param("caseId"));
+  if (!(["Outcome Communication Pending", "Corrective Action Monitoring", "Referred"] as string[]).includes(complaint.status)) throw new Error("INVALID_STATE");
+  const data = closureSchema.parse(await context.req.json());
+  if (!data.communicationCompleted) throw new Error("COMMUNICATION_REQUIRED");
+  const finding = await context.env.DB.prepare("SELECT id FROM investigation_findings WHERE complaint_id = ? AND status = 'APPROVED' LIMIT 1").bind(complaint.id).first();
+  const approval = await context.env.DB.prepare("SELECT id FROM approvals WHERE complaint_id = ? AND stage = 'MANAGEMENT' AND decision IN ('Approve','Close with no further action') LIMIT 1").bind(complaint.id).first();
+  if (complaint.status !== "Referred" && (!finding || !approval)) throw new Error("FINAL_APPROVAL_REQUIRED");
+  const openActions = await context.env.DB.prepare(
+    "SELECT COUNT(*) AS total FROM corrective_actions WHERE complaint_id = ? AND deleted_at IS NULL AND status NOT IN ('Completed','Closed','Rejected')",
+  ).bind(complaint.id).first<{ total: number }>();
+  if ((openActions?.total ?? 0) > 0 && !data.transferOpenActions) throw new Error("OUTSTANDING_CORRECTIVE_ACTIONS");
+  if (data.transferOpenActions) await context.env.DB.prepare(
+    "UPDATE corrective_actions SET monitoring_transferred = 1, updated_at = CURRENT_TIMESTAMP WHERE complaint_id = ? AND status NOT IN ('Completed','Closed','Rejected')",
+  ).bind(complaint.id).run();
+  await context.env.DB.prepare(
+    "UPDATE complaints SET investigation_outcome = ?, closure_reason = ?, closed_at = CURRENT_TIMESTAMP, updated_by = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+  ).bind(data.outcome, data.reason, actor.id, complaint.id).run();
+  assertTransition(complaint.status as ComplaintStatus, "Closed");
+  await changeStatus(context.env.DB, {
+    complaintId: complaint.id, from: complaint.status, to: "Closed", actor,
+    reason: data.reason, correlationId: context.get("correlationId"),
+  });
+  await audit(context.env.DB, {
+    actor, action: "CASE_CLOSED", entityType: "complaint", entityId: complaint.id,
+    newValue: { outcome: data.outcome }, correlationId: context.get("correlationId"),
+    reason: data.reason, source: "INTERNAL",
+  });
+  return context.json(envelope(context, { status: "Closed" }));
+});
+
+internalApi.post("/cases/:caseId/reopen", async (context) => {
+  const actor = context.get("actor");
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "REVIEWER", "MANAGEMENT_APPROVER"]);
+  const complaint = await requireCase(context, context.req.param("caseId"));
+  if (complaint.status !== "Closed") throw new Error("INVALID_STATE");
+  const data = reopenSchema.parse(await context.req.json());
+  const authoriser = await context.env.DB.prepare(
+    "SELECT u.id FROM users u JOIN user_roles ur ON ur.user_id = u.id JOIN roles r ON r.id = ur.role_id WHERE u.id = ? AND u.active = 1 AND r.code IN ('REVIEWER','MANAGEMENT_APPROVER','SYSTEM_ADMINISTRATOR')",
+  ).bind(data.authorisingOfficerId).first();
+  if (!authoriser) throw new Error("INVALID_AUTHORISING_OFFICER");
+  await context.env.DB.prepare(
+    "UPDATE complaints SET reopened_at = CURRENT_TIMESTAMP, closed_at = NULL, updated_by = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+  ).bind(actor.id, complaint.id).run();
+  assertTransition("Closed", "Reopened");
+  await changeStatus(context.env.DB, {
+    complaintId: complaint.id, from: "Closed", to: "Reopened", actor,
+    reason: data.reason + " Authorised by " + data.authorisingOfficerId,
+    correlationId: context.get("correlationId"),
+  });
+  await audit(context.env.DB, {
+    actor, action: "CASE_REOPENED", entityType: "complaint", entityId: complaint.id,
+    previousValue: { closedAt: complaint.closed_at }, newValue: { authorisingOfficerId: data.authorisingOfficerId },
+    correlationId: context.get("correlationId"), reason: data.reason, source: "INTERNAL",
+  });
+  return context.json(envelope(context, { status: "Reopened" }));
+});
+
+internalApi.get("/approvals", async (context) => {
+  const actor = context.get("actor");
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "REVIEWER", "MANAGEMENT_APPROVER", "INTEGRITY_ADMINISTRATOR", "AUDITOR"]);
+  const scope = caseListScope(actor);
+  const rows = await context.env.DB.prepare(
+    "SELECT c.case_id, c.title, c.risk_rating, c.status, c.updated_at, MAX(f.version) AS version FROM complaints c JOIN investigation_findings f ON f.complaint_id = c.id WHERE c.status IN ('Pending Review','Pending Management Decision') AND " + scope.clause + " GROUP BY c.id ORDER BY c.updated_at",
+  ).bind(...scope.values).all();
+  return context.json(envelope(context, rows.results));
+});
+
+function csvCell(value: unknown): string {
+  let text = String(value ?? "");
+  if (/^[=+\-@]/.test(text)) text = "'" + text;
+  return '"' + text.replaceAll('"', '""') + '"';
+}
+
+internalApi.get("/reports/export.csv", async (context) => {
+  const actor = context.get("actor");
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "INTEGRITY_OFFICER", "REVIEWER", "MANAGEMENT_APPROVER", "AUDITOR"]);
+  const scope = caseListScope(actor);
+  const rows = await context.env.DB.prepare(
+    "SELECT c.case_id, c.created_at, cc.name AS category, c.department, c.risk_rating, c.status, c.sla_due_at, c.investigation_outcome, c.closed_at FROM complaints c JOIN complaint_categories cc ON cc.id = c.category_id WHERE c.deleted_at IS NULL AND " + scope.clause + " ORDER BY c.created_at DESC",
+  ).bind(...scope.values).all<any>();
+  const headers = ["Case ID", "Date received", "Category", "Department", "Risk", "Status", "SLA due", "Outcome", "Closed"];
+  const keys = ["case_id", "created_at", "category", "department", "risk_rating", "status", "sla_due_at", "investigation_outcome", "closed_at"];
+  const csv = [headers.map(csvCell).join(","), ...rows.results.map((row) => keys.map((key) => csvCell(row[key])).join(","))].join("\r\n");
+  return new Response(csv, {
+    headers: { "Content-Type": "text/csv; charset=utf-8", "Content-Disposition": 'attachment; filename="complaint-report.csv"', "Cache-Control": "private, no-store" },
+  });
+});
+
+internalApi.get("/notifications", async (context) => {
+  const actor = context.get("actor");
+  const rows = await context.env.DB.prepare(
+    "SELECT * FROM notifications WHERE user_id = ? OR user_id IS NULL ORDER BY created_at DESC LIMIT 200",
+  ).bind(actor.id).all();
+  return context.json(envelope(context, rows.results));
+});
+
+internalApi.post("/notifications/:id/read", async (context) => {
+  const actor = context.get("actor");
+  await context.env.DB.prepare(
+    "UPDATE notifications SET read_at = CURRENT_TIMESTAMP WHERE id = ? AND (user_id = ? OR user_id IS NULL)",
+  ).bind(context.req.param("id"), actor.id).run();
+  return context.json(envelope(context, { read: true }));
+});
+
+internalApi.get("/users", async (context) => {
+  const rows = await context.env.DB.prepare(
+    "SELECT u.id, u.email, u.display_name, u.department, u.active, GROUP_CONCAT(r.code) AS roles FROM users u LEFT JOIN user_roles ur ON ur.user_id = u.id LEFT JOIN roles r ON r.id = ur.role_id WHERE u.deleted_at IS NULL GROUP BY u.id ORDER BY u.display_name",
+  ).all();
+  return context.json(envelope(context, rows.results));
+});
+
+internalApi.post("/users", async (context) => {
+  const actor = context.get("actor");
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR"]);
+  const data = userSchema.parse(await context.req.json());
+  const allowedRoles: RoleCode[] = ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "INTEGRITY_OFFICER", "CASE_OFFICER", "REVIEWER", "MANAGEMENT_APPROVER", "DEPARTMENT_ACTION_OWNER", "AUDITOR"];
+  if (data.roles.some((role) => !allowedRoles.includes(role as RoleCode))) throw new Error("INVALID_ROLE");
+  if (!data.email.toLowerCase().endsWith("@" + context.env.ALLOWED_EMAIL_DOMAIN.toLowerCase())) throw new Error("EMAIL_DOMAIN_NOT_ALLOWED");
+  const id = crypto.randomUUID();
+  const roleRows = await context.env.DB.prepare(
+    "SELECT id, code FROM roles WHERE code IN (" + data.roles.map(() => "?").join(",") + ")",
+  ).bind(...data.roles).all<{ id: string; code: string }>();
+  if (roleRows.results.length !== data.roles.length) throw new Error("INVALID_ROLE");
+  await context.env.DB.batch([
+    context.env.DB.prepare("INSERT INTO users (id, email, display_name, department) VALUES (?, ?, ?, ?)").bind(id, data.email.toLowerCase(), data.displayName, data.department ?? null),
+    ...roleRows.results.map((role) => context.env.DB.prepare(
+      "INSERT INTO user_roles (user_id, role_id, granted_by) VALUES (?, ?, ?)",
+    ).bind(id, role.id, actor.id)),
+  ]);
+  await audit(context.env.DB, {
+    actor, action: "USER_CREATED", entityType: "user", entityId: id,
+    newValue: { email: data.email, roles: data.roles }, correlationId: context.get("correlationId"), source: "INTERNAL",
+  });
+  return context.json(envelope(context, { id }), 201);
+});
+
+internalApi.get("/settings", async (context) => {
+  assertRole(context.get("actor"), ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR"]);
+  const [slaRules, settings] = await Promise.all([
+    context.env.DB.prepare(
+      "SELECT sr.*, cc.name AS category_name FROM sla_rules sr LEFT JOIN complaint_categories cc ON cc.id = sr.category_id ORDER BY sr.risk_level, cc.name",
+    ).all(),
+    context.env.DB.prepare("SELECT setting_key, setting_value, updated_at FROM application_settings WHERE is_secret = 0 ORDER BY setting_key").all(),
+  ]);
+  return context.json(envelope(context, { slaRules: slaRules.results, settings: settings.results }));
+});
+
+internalApi.put("/settings/sla", async (context) => {
+  const actor = context.get("actor");
+  assertRole(actor, ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR"]);
+  const data = z.object({
+    riskLevel: z.enum(["Critical", "High", "Medium", "Low"]),
+    categoryId: z.string().nullable(),
+    targetBusinessDays: z.number().int().min(1).max(365),
+  }).parse(await context.req.json());
+  const existing = data.categoryId
+    ? await context.env.DB.prepare("SELECT id FROM sla_rules WHERE risk_level = ? AND category_id = ?").bind(data.riskLevel, data.categoryId).first<{ id: string }>()
+    : await context.env.DB.prepare("SELECT id FROM sla_rules WHERE risk_level = ? AND category_id IS NULL").bind(data.riskLevel).first<{ id: string }>();
+  if (existing) {
+    await context.env.DB.prepare(
+      "UPDATE sla_rules SET target_business_days = ?, active = 1, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+    ).bind(data.targetBusinessDays, existing.id).run();
+  } else {
+    await context.env.DB.prepare(
+      "INSERT INTO sla_rules (id, category_id, risk_level, target_business_days) VALUES (?, ?, ?, ?)",
+    ).bind(crypto.randomUUID(), data.categoryId, data.riskLevel, data.targetBusinessDays).run();
+  }
+  await audit(context.env.DB, {
+    actor, action: "SLA_RULE_UPDATED", entityType: "sla_rule", entityId: existing?.id ?? data.riskLevel,
+    newValue: data, correlationId: context.get("correlationId"), source: "INTERNAL",
+  });
+  return context.json(envelope(context, { updated: true }));
+});
+
+internalApi.get("/audit", async (context) => {
+  assertRole(context.get("actor"), ["SYSTEM_ADMINISTRATOR", "INTEGRITY_ADMINISTRATOR", "AUDITOR"]);
+  const rows = await context.env.DB.prepare(
+    "SELECT al.*, u.display_name AS user_name FROM audit_logs al LEFT JOIN users u ON u.id = al.user_id ORDER BY al.timestamp DESC LIMIT 500",
+  ).all();
+  return context.json(envelope(context, rows.results));
+});
