@@ -33,3 +33,9 @@ outputs/reports/*
 
 .DS_Store
 Thumbs.db
+
+# React / Vite
+node_modules/
+dist/
+public/generated/
+npm-debug.log*
