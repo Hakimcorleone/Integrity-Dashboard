@@ -151,6 +151,15 @@ cd Integrity-Dashboard
 pip install -r requirements.txt
 ```
 
+Build or refresh every generated dataset, model, report, and chart with one command:
+
+```bash
+python run_pipeline.py
+```
+
+The command stops immediately if any stage fails. Individual pipeline stages can
+still be run with the commands below.
+
 ## Generate the Dataset
 
 ```bash
@@ -252,6 +261,18 @@ Responsible use principles:
 ## Disclaimer
 
 “This tool does not determine whether corruption, fraud, bribery, misconduct, or wrongdoing has occurred. It is a red flag analytics and machine learning prototype intended to support preliminary review, internal control assessment, and integrity risk monitoring. All data is synthetic. Users should not upload confidential, personal, or sensitive information into public deployments.”
+
+## Automated Tests
+
+Install the development dependency and run the test suite:
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
+GitHub Actions runs the complete data/model pipeline and test suite for every
+push and pull request to `main`.
 
 ## Suggested Next Improvements
 
