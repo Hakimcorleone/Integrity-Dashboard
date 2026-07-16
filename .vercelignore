@@ -1,0 +1,10 @@
+data/processed/
+models/
+notebooks/
+tests/
+.pytest_cache/
+__pycache__/
+src/*.py
+run_pipeline.py
+requirements.txt
+requirements-dev.txt
