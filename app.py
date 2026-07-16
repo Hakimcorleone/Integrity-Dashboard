@@ -83,6 +83,17 @@ BASE_FEATURE_COLUMNS = [
 ]
 
 RISK_LEVEL_ORDER = ["Low", "Medium", "High", "Critical"]
+REQUIRED_DATA_COLUMNS = {
+    "transaction_id",
+    "vendor_id",
+    "department",
+    "region",
+    "procurement_method",
+    "invoice_amount",
+    "risk_score",
+    "risk_level",
+    "review_required",
+}
 
 
 st.set_page_config(
@@ -111,6 +122,16 @@ def load_training_feature_columns() -> list[str]:
 def load_pickle(path: Path):
     with path.open("rb") as file:
         return pickle.load(file)
+
+
+def validate_dataset(df: pd.DataFrame) -> None:
+    """Validate the minimum schema needed by the dashboard."""
+    if df.empty:
+        raise ValueError("The dataset is empty.")
+
+    missing_columns = sorted(REQUIRED_DATA_COLUMNS - set(df.columns))
+    if missing_columns:
+        raise ValueError(f"The dataset is missing required columns: {missing_columns}")
 
 
 def bool_to_int(value: bool) -> int:
@@ -173,7 +194,7 @@ def render_overview() -> None:
 def render_dataset(df: pd.DataFrame) -> None:
     st.header("Dataset")
     st.write(f"Dataset shape: {df.shape[0]:,} rows x {df.shape[1]:,} columns")
-    st.dataframe(df.head(25), use_container_width=True)
+    st.dataframe(df.head(25), width="stretch")
     st.download_button(
         label="Download dataset CSV",
         data=DATA_PATH.read_bytes(),
@@ -217,7 +238,7 @@ def render_analytics_dashboard(df: pd.DataFrame) -> None:
         .rename(columns={"risk_score": "average_risk_score"})
     )
     st.subheader("Top 10 Vendors by Average Risk Score")
-    st.dataframe(vendor_risk, use_container_width=True)
+    st.dataframe(vendor_risk, width="stretch")
 
     highest_risk_columns = [
         "transaction_id",
@@ -232,7 +253,7 @@ def render_analytics_dashboard(df: pd.DataFrame) -> None:
     ]
     highest_risk = df.sort_values("risk_score", ascending=False).head(10)[highest_risk_columns]
     st.subheader("Top 10 Highest-Risk Transactions")
-    st.dataframe(highest_risk, use_container_width=True)
+    st.dataframe(highest_risk, width="stretch")
 
 
 def render_model_results() -> None:
@@ -240,7 +261,7 @@ def render_model_results() -> None:
 
     if MODEL_COMPARISON_PATH.exists():
         st.subheader("Model Comparison")
-        st.dataframe(load_model_comparison(), use_container_width=True)
+        st.dataframe(load_model_comparison(), width="stretch")
     else:
         st.warning("Model comparison is not available. Run: python src/train_model.py")
 
@@ -254,14 +275,14 @@ def render_model_results() -> None:
     with image_columns[0]:
         st.subheader("Confusion Matrix")
         if CONFUSION_MATRIX_PATH.exists():
-            st.image(str(CONFUSION_MATRIX_PATH), use_container_width=True)
+            st.image(str(CONFUSION_MATRIX_PATH), width="stretch")
         else:
             st.warning("Confusion matrix chart is not available.")
 
     with image_columns[1]:
         st.subheader("Feature Importance")
         if FEATURE_IMPORTANCE_PATH.exists():
-            st.image(str(FEATURE_IMPORTANCE_PATH), use_container_width=True)
+            st.image(str(FEATURE_IMPORTANCE_PATH), width="stretch")
         else:
             st.warning("Feature importance chart is not available for the current model.")
 
@@ -334,11 +355,26 @@ def render_prediction_form() -> None:
             "round_amount_flag": bool_to_int(round_amount_flag),
             "split_purchase_flag": bool_to_int(split_purchase_flag),
         }
-        predicted_level = predict_risk_level(raw_case)
-        st.success(f"Predicted risk level: {predicted_level}")
-        st.warning(
-            "This prediction is for review prioritisation only and is not a finding of misconduct."
-        )
+        try:
+            predicted_level = predict_risk_level(raw_case)
+        except (
+            FileNotFoundError,
+            OSError,
+            pickle.UnpicklingError,
+            ValueError,
+            AttributeError,
+            ImportError,
+        ) as error:
+            st.error(
+                "Prediction is unavailable because a model artifact could not be loaded. "
+                "Run `python run_pipeline.py` to rebuild the project artifacts."
+            )
+            st.caption(str(error))
+        else:
+            st.success(f"Predicted risk level: {predicted_level}")
+            st.warning(
+                "This prediction is for review prioritisation only and is not a finding of misconduct."
+            )
 
 
 def main() -> None:
@@ -347,9 +383,18 @@ def main() -> None:
     render_overview()
 
     if DATA_PATH.exists():
-        df = load_dataset()
-        render_dataset(df)
-        render_analytics_dashboard(df)
+        try:
+            df = load_dataset()
+            validate_dataset(df)
+        except (OSError, ValueError, pd.errors.ParserError) as error:
+            st.error(
+                "The dashboard dataset could not be loaded. "
+                "Run `python run_pipeline.py` to rebuild it."
+            )
+            st.caption(str(error))
+        else:
+            render_dataset(df)
+            render_analytics_dashboard(df)
     else:
         st.error("Dataset is missing. Run: python src/generate_dataset.py")
 
